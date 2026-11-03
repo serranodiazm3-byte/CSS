@@ -67,15 +67,13 @@ footer ul li a {
 
 /* El ID tiene 100 puntos de peso y aplasta a la clase (10 puntos) */
 #btn-destacado {
-    color: red;
+    color: orange;
 }
 
 .btn-comprar {
     color: orange;
 }
-/* ==========================================================
-   5. MODELO DE CAJA Y ESPACIADO (Subactividad 2)
-   ========================================== */
+/* 5. MODELO DE CAJA Y ESPACIADO (Subactividad 2) */
 
 /* Contenedor principal de la sección para darle márgenes y centrado */
 main section {
@@ -110,4 +108,52 @@ footer {
     background-color: #343a40;
     color: #ffffff;
     text-align: center;
+}
+
+/* 6. MISIÓN DE APROPIACIÓN - MODELO DE CAJA Y BACKGROUNDS */
+
+/* Separar las supercajas principales con colores de fondo distintos */
+header {
+    /* Aquí puedes inyectar tu imagen como pide la guía o dejar un color base */
+    background-color: #1a252f;
+    /* Propiedades de imagen para el header (descomenta y ajusta tu ruta cuando tengas la imagen) */
+    /* background-image: url('img/tu-banner.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 30px 20px;
+}
+
+main {
+    background-color: #f8f9fa; /* Fondo general del contenido principal */
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+aside {
+    background-color: #e9ecef; /* Fondo de la barra lateral */
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ced4da;
+}
+
+footer {
+    background-color: #343a40; /* Fondo del pie de página */
+    color: #ffffff;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Inyectar aire de protección (padding) y campo de fuerza (margin) en las tarjetas (<article>) */
+main section article {
+    background-color: #ffffff;       /* Fondo blanco para destacar el producto */
+    border: 1px solid #dee2e6;       /* Borde sutil */
+    padding: 20px;                   /* Relleno interno para que el texto no toque los bordes */
+    margin-bottom: 15px;             /* Campo de fuerza exterior para empujar a los hermanos */
+    border-radius: 6px;
 }
