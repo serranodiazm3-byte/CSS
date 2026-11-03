@@ -1,3 +1,9 @@
+/*(Modelo de Caja)*/
+{
+    box-sizing: border-box;
+    margin: 30;
+    padding: 20;
+}
 /* ==========================================================
    1. HERENCIA (Genética del navegador)
    ========================================== */
@@ -7,9 +13,7 @@ body {
 }
 
 
-/* ==========================================================
-   2. ESTILOS DE TEXTO POR ZONAS Y ESTRUCTURA
-   ========================================== */
+/*2. ESTILOS DE TEXTO POR ZONAS Y ESTRUCTURA */
 
 /* Títulos de los productos */
 h2 {
@@ -37,9 +41,7 @@ footer p {
 }
 
 
-/* ==========================================================
-   3. AISLAMIENTO POR ZONAS (Selectores Combinados)
-   ========================================== */
+/* 3. AISLAMIENTO POR ZONAS (Selectores Combinados) */
 
 /* Enlaces del menú principal (Header) */
 header nav ul li a {
@@ -60,9 +62,8 @@ footer ul li a {
 }
 
 
-/* ==========================================================
-   4. CONFLICTO DE AUTORIDAD (Cascada vs Especificidad)
-   ========================================== */
+/* 4. CONFLICTO DE AUTORIDAD (Cascada vs Especificidad)
+    */
 
 /* El ID tiene 100 puntos de peso y aplasta a la clase (10 puntos) */
 #btn-destacado {
@@ -71,4 +72,42 @@ footer ul li a {
 
 .btn-comprar {
     color: orange;
+}
+/* ==========================================================
+   5. MODELO DE CAJA Y ESPACIADO (Subactividad 2)
+   ========================================== */
+
+/* Contenedor principal de la sección para darle márgenes y centrado */
+main section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Tarjetas individuales de cada producto */
+main section article {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Barra lateral */
+aside {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+}
+
+/* Pie de página */
+footer {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
 }
