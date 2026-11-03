@@ -3,10 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
+    <title>Catálogo Web - Momento 2</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
+    <!-- Encabezado y menú principal -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catálogo General</a></li>
+                <li><a href="#">Ofertas Especiales</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cuerpo principal con la zona central de productos -->
+    <main>
+        <section>
+            <!-- Producto 1 (Con clase e ID para el conflicto de especificidad) -->
+            <article>
+                <h2>Laptop Gamer Pro 15"</h2>
+                <p>Computador portátil de alto rendimiento diseñado para desarrollo de software, diseño gráfico y videojuegos de última generación. Cuenta con procesador avanzado y 16GB de memoria RAM.</p>
+                <p>Precio especial: $3.500.000 COP</p>
+                <a href="#" class="btn-comprar" id="btn-destacado">Comprar</a>
+            </article>
+
+            <!-- Producto 2 -->
+            <article>
+                <h2>Teclado Mecánico RGB</h2>
+                <p>Teclado mecánico con iluminación LED personalizable, switches rojos de respuesta ultra rápida y estructura de aluminio reforzada para largas sesiones de escritura y programación.</p>
+                <p>Precio especial: $220.000 COP</p>
+                <a href="#" class="btn-comprar">Comprar</a>
+            </article>
+
+            <!-- Producto 3 -->
+            <article>
+                <h2>Monitor Ergonómico 27"</h2>
+                <p>Monitor con resolución Full HD, tecnología de protección visual contra la fatiga ocular y soporte ajustable en altura e inclinación para optimizar tu espacio de estudio o trabajo.</p>
+                <p>Precio especial: $850.000 COP</p>
+                <a href="#" class="btn-comprar">Comprar</a>
+            </article>
+
+            <!-- Producto 4 -->
+            <article>
+                <h2>Mouse Inalámbrico Ergonómico</h2>
+                <p>Dispositivo de precisión con diseño anatómico para evitar el cansancio en la muñeca, sensor óptico de alta sensibilidad y batería recargable de larga duración.</p>
+                <p>Precio especial: $95.000 COP</p>
+                <a href="#" class="btn-comprar">Comprar</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Barra lateral con menú secundario de filtros -->
+    <aside>
+        <h2>Categorías de Productos</h2>
+        <ul>
+            <li><a href="#">Computadores y Laptops</a></li>
+            <li><a href="#">Periféricos y Accesorios</a></li>
+            <li><a href="#">Monitores y Pantallas</a></li>
+            <li><a href="#">Componentes de Hardware</a></li>
+        </ul>
+    </aside>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 - Todos los derechos reservados. Programa de Análisis y Desarrollo de Software (ADSO).</p>
+        <ul>
+            <li><a href="#">Soporte Técnico</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+            <li><a href="#">Redes Sociales</a></li>
+        </ul>
+    </footer>
 
 </body>
 </html>
