@@ -21,3 +21,16 @@ CSS
 
 3. **Cómo esta metodología evita la guerra de especificidad (Cascada):**
    - Mantiene una especificidad plana y predecible basada en clases individuales (peso 10), eliminando selectores anidados complejos y previniendo que una regla suprima a otra de forma accidental a medida que el proyecto crece.
+
+1.Proyecto de maquetación web frontend desarrollado como parte de la guía de aprendizaje del SENA, aplicando estructuras flexibles, metodologías limpias y control de versiones.
+
+## 🛠️ Tecnologías y Herramientas Utilizadas
+- **HTML5**: Estructuración semántica de la interfaz (`nav`, `main`, `article`, `footer`).
+- **CSS3 / Flexbox**: Maquetación y distribución flexible de elementos (layout global, menú superior, menú lateral de categorías y tarjetas simétricas).
+- **Metodología BEM**: Bloques, Elementos y Modificadores para una nomenclatura limpia y mantenible en las clases CSS.
+- **Git y Git Bash**: Control de versiones local y repositorio remoto.
+
+## 💡 Hallazgos y Conclusiones sobre Flexbox
+1. **Contenedor Global y `min-height: 100vh`**: Permitió organizar el layout en columna para que la página siempre ocupe el alto completo de la pantalla, manteniendo el pie de página fijo abajo.
+2. **Distribución en Fila y Columna**: El uso combinado de `flex-direction: row` (para la barra de navegación y el catálogo) y `flex-direction: column` (para las tarjetas) facilitó una alineación precisa sin romper el diseño en pantallas medianas.
+3. **Simetría y Alineación de Botones**: Gracias a la propiedad `flex-grow: 1` aplicada en la descripción de las tarjetas, se logró que los botones de compra quedaran perfectamente alineados en la parte inferior de todas las fichas, independientemente de la longitud del texto.

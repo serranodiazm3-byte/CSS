@@ -4,62 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Productos - ADSO</title>
-    <!-- Enlace a tu archivo CSS principal que carga los módulos -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <main class="main">
-        <section class="catalog">
-            
-            <!-- Producto 1 -->
-            <article class="card card--destacada">
-                <img src="recursos/computador.jpg" alt="Laptop Gamer" class="card__image">
-                <h2 class="card__title">Laptop Gamer Pro 15"</h2>
-                <p class="card__description">Computador portátil de alto rendimiento diseñado para desarrollo de software, diseño gráfico y videojuegos de última generación. Cuenta con procesador avanzado y 16GB de memoria RAM.</p>
-                <p class="card__price">Precio especial: $3.500.000 COP</p>
-                <a href="#" class="btn btn--primario" id="btn-destacado">Comprar</a>
-            </article>
+    <div class="app-layout">
 
-            <!-- Producto 2 -->
-            <article class="card">
-                <img src="recursos/teclado.jpg" alt="Teclado Mecánico" class="card__image">
-                <h2 class="card__title">Teclado Mecánico RGB</h2>
-                <p class="card__description">Teclado mecánico con iluminación LED personalizable, switches rojos de respuesta ultra rápida y estructura de aluminio reforzada para largas sesiones de escritura y programación.</p>
-                <p class="card__price">Precio especial: $220.000 COP</p>
-                <a href="#" class="btn btn--primario">Comprar</a>
-            </article>
+        <!-- 1. Menú superior principal -->
+        <nav class="top-menu">
+            <ul class="top-menu__list">
+                <li class="top-menu__item"><a href="#">Inicio</a></li>
+                <li class="top-menu__item"><a href="#">Categorías</a></li>
+                <li class="top-menu__item"><a href="#">Ofertas</a></li>
+                <li class="top-menu__item"><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
 
-            <!-- Producto 3 -->
-            <article class="card">
-                <img src="recursos/monitor.avif" alt="Monitor Ergonómico" class="card__image">
-                <h2 class="card__title">Monitor Ergonómico 27"</h2>
-                <p class="card__description">Monitor con resolución Full HD, tecnología de protección visual contra la fatiga ocular y soporte ajustable en altura e inclinación para optimizar tu espacio de estudio o trabajo.</p>
-                <p class="card__price">Precio especial: $850.000 COP</p>
-                <a href="#" class="btn btn--primario">Comprar</a>
-            </article>
+        <!-- 2. Contenedor central: Menú de productos a la izquierda + Catálogo a la derecha -->
+        <div class="main-wrapper">
 
-            <!-- Producto 4 -->
-            <article class="card">
-                <img src="recursos/mouse.avif" alt="Mouse Inalámbrico" class="card__image">
-                <h2 class="card__title">Mouse Inalámbrico Ergonómico</h2>
-                <p class="card__description">Dispositivo de precisión con diseño anatómico para evitar el cansancio en la muñeca, sensor óptico de alta sensibilidad y batería recargable de larga duración.</p>
-                <p class="card__price">Precio especial: $95.000 COP</p>
-                <a href="#" class="btn btn--primario">Comprar</a>
-            </article>
+            <!-- Nuevo menú lateral de productos -->
+            <aside class="aside-menu">
+                <h3 class="aside-menu__title">Productos</h3>
+                <ul class="aside-menu__list">
+                    <li class="aside-menu__item"><a href="#">Todos</a></li>
+                    <li class="aside-menu__item"><a href="#">Computadores</a></li>
+                    <li class="aside-menu__item"><a href="#">Periféricos</a></li>
+                    <li class="aside-menu__item"><a href="#">Monitores</a></li>
+                    <li class="aside-menu__item"><a href="#">Accesorios</a></li>
+                </ul>
+            </aside>
 
-        </section>
-    </main>
+            <!-- Sección derecha: Título visible + Tarjetas -->
+            <main class="main">
+                
+                <div class="catalog-header">
+                    <h1 class="catalog-title">Nuestra Vitrina Tecnológica</h1>
+                    <p class="catalog-subtitle">Explora los dispositivos de alto rendimiento desarrollados para ADSO</p>
+                </div>
 
-    <!-- Menú lateral -->
-    <aside class="aside-menu">
-        <ul class="aside-menu__list">
-            <li class="aside-menu__item"><a href="#">Inicio</a></li>
-            <li class="aside-menu__item"><a href="#">Categorías</a></li>
-            <li class="aside-menu__item"><a href="#">Ofertas</a></li>
-            <li class="aside-menu__item"><a href="#">Contacto</a></li>
-        </ul>
-    </aside>
+                <section class="catalog">
+                    
+                    <!-- Producto 1 -->
+                    <article class="card card--destacada">
+                        <img src="recursos/computador.jpg" alt="Laptop Gamer" class="card__image">
+                        <h2 class="card__title">Laptop Gamer Pro 15"</h2>
+                        <p class="card__description">Computador portátil de alto rendimiento diseñado para desarrollo de software, diseño gráfico y videojuegos de última generación. Cuenta con procesador avanzado y 16GB de memoria RAM.</p>
+                        <div class="card__price-wrapper">
+                            <p class="card__price">Precio especial: $3.500.000 COP</p>
+                        </div>
+                        <a href="#" class="btn btn--primario" id="btn-destacado">Comprar</a>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="card">
+                        <img src="recursos/teclado.jpg" alt="Teclado Mecánico" class="card__image">
+                        <h2 class="card__title">Teclado Mecánico RGB</h2>
+                        <p class="card__description">Teclado mecánico con iluminación LED personalizable, switches rojos de respuesta ultra rápida y estructura de aluminio reforzada para largas sesiones de escritura y programación.</p>
+                        <div class="card__price-wrapper">
+                            <p class="card__price">Precio especial: $220.000 COP</p>
+                        </div>
+                        <a href="#" class="btn btn--primario">Comprar</a>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="card">
+                        <img src="recursos/monitor.avif" alt="Monitor Ergonómico" class="card__image">
+                        <h2 class="card__title">Monitor Ergonómico 27"</h2>
+                        <p class="card__description">Monitor con resolución Full HD, tecnología de protección visual contra la fatiga ocular y soporte ajustable en altura e inclinación para optimizar tu espacio de estudio o trabajo.</p>
+                        <div class="card__price-wrapper">
+                            <p class="card__price">Precio especial: $850.000 COP</p>
+                        </div>
+                        <a href="#" class="btn btn--primario">Comprar</a>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="card">
+                        <img src="recursos/mouse.avif" alt="Mouse Inalámbrico" class="card__image">
+                        <h2 class="card__title">Mouse Inalámbrico Ergonómico</h2>
+                        <p class="card__description">Dispositivo de precisión con diseño anatómico para evitar el cansancio en la muñeca, sensor óptico de alta sensibilidad y batería recargable de larga duración.</p>
+                        <div class="card__price-wrapper">
+                            <p class="card__price">Precio especial: $95.000 COP</p>
+                        </div>
+                        <a href="#" class="btn btn--primario">Comprar</a>
+                    </article>
+
+                </section>
+            </main>
+
+        </div>
+
+        <!-- 3. Apartado blanco inferior -->
+        <footer class="footer-box">
+            <p>© 2026 Catálogo ADSO - Todos los derechos reservados</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
