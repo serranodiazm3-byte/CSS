@@ -1,5 +1,13 @@
 /* ==========================================================
-   CENTRAL DE MANDO / CUSTOM PROPERTIES (:root)
+CONEXIÓN DE MÓDULOS INDEPENDIENTES (Arquitectura BEM)
+   ========================================== */
+
+@import url('css/tarjeta.css');
+@import url('css/botones.css');
+@import url('css/menu-lateral.css');
+
+/* ==========================================================
+CENTRAL DE MANDO / CUSTOM PROPERTIES (:root)
    ========================================== */
 :root {
     --color-primario: #02398b;
@@ -29,9 +37,3 @@ body {
     background-color: var(--color-fondo);
 }
 
-/* ==========================================================
-   CONEXIÓN DE MÓDULOS INDEPENDIENTES (Arquitectura BEM)
-   ========================================== */
-@import url('css/tarjeta.css');
-@import url('css/botones.css');
-@import url('css/menu-lateral.css');
