@@ -1,159 +1,37 @@
-/*(Modelo de Caja)*/
-{
-    box-sizing: border-box;
-    margin: 30;
-    padding: 20;
-}
 /* ==========================================================
-   1. HERENCIA (Genética del navegador)
+   CENTRAL DE MANDO / CUSTOM PROPERTIES (:root)
    ========================================== */
+:root {
+    --color-primario: #02398b;
+    --color-secundario: #e9ecef;
+    --color-fondo: #f8f9fa;
+    --color-texto: #333333;
+    --color-titulo: #1a252f;
+    --color-descripcion: #7c99b7;
+    --color-superficie: #ffffff;
+    --color-borde: #dee2e6;
+    --color-fondo-footer: #343a40;
+    --fuente-principal: "Roboto", sans-serif;
+    --espaciado-pequeno: 10px;
+    --espaciado-medio: 16px;
+    --espaciado-grande: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: sans-serif;
-    color: #333333;
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
 }
 
-
-/*2. ESTILOS DE TEXTO POR ZONAS Y ESTRUCTURA */
-
-/* Títulos de los productos */
-h2 {
-    color: #1a252f;
-}
-
-/* Descripción detallada de cada producto (Primer párrafo del article) */
-main section article p:nth-of-type(1) {
-    color: #495057;       /* Gris oscuro elegante y muy legible */
-    font-size: 15px;      /* Tamaño cómodo para la lectura */
-    line-height: 1.5;     /* Espacio entre líneas para que no se vea amontonado */
-    margin-bottom: 8px;   /* Separación limpia antes del precio */
-}
-
-/* Precio del producto (Segundo párrafo del article) */
-main section article p:nth-of-type(2) {
-    color: #0d6efd;       /* Color azul destacado para el precio */
-    font-weight: bold;    /* Negrita para que resalte */
-    margin-bottom: 8px;
-}
-
-/* Texto de derechos de autor en el footer */
-footer p {
-    color: #6c757d;
-}
-
-
-/* 3. AISLAMIENTO POR ZONAS (Selectores Combinados) */
-
-/* Enlaces del menú principal (Header) */
-header nav ul li a {
-    color: blue;
-    background-color: #f0f0f0;
-}
-
-/* Enlaces del menú secundario (Aside) */
-aside ul li a {
-    color: green;
-    background-color: #f0f0f0;
-}
-
-/* Enlaces del pie de página (Footer) */
-footer ul li a {
-    color: gray;
-    background-color: #f0f0f0;
-}
-
-
-/* 4. CONFLICTO DE AUTORIDAD (Cascada vs Especificidad)
-    */
-
-/* El ID tiene 100 puntos de peso y aplasta a la clase (10 puntos) */
-#btn-destacado {
-    color: orange;
-}
-
-.btn-comprar {
-    color: orange;
-}
-/* 5. MODELO DE CAJA Y ESPACIADO (Subactividad 2) */
-
-/* Contenedor principal de la sección para darle márgenes y centrado */
-main section {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-}
-
-/* Tarjetas individuales de cada producto */
-main section article {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-/* Barra lateral */
-aside {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #e9ecef;
-    border: 1px solid #ced4da;
-}
-
-/* Pie de página */
-footer {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #343a40;
-    color: #ffffff;
-    text-align: center;
-}
-
-/* 6. MISIÓN DE APROPIACIÓN - MODELO DE CAJA Y BACKGROUNDS */
-
-/* Separar las supercajas principales con colores de fondo distintos */
-header {
-    /* Aquí puedes inyectar tu imagen como pide la guía o dejar un color base */
-    background-color: #1a252f;
-    /* Propiedades de imagen para el header (descomenta y ajusta tu ruta cuando tengas la imagen) */
-    /* background-image: url('img/tu-banner.jpg'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    padding: 30px 20px;
-}
-
-main {
-    background-color: #f8f9fa; /* Fondo general del contenido principal */
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-aside {
-    background-color: #e9ecef; /* Fondo de la barra lateral */
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ced4da;
-}
-
-footer {
-    background-color: #343a40; /* Fondo del pie de página */
-    color: #ffffff;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Inyectar aire de protección (padding) y campo de fuerza (margin) en las tarjetas (<article>) */
-main section article {
-    background-color: #ffffff;       /* Fondo blanco para destacar el producto */
-    border: 1px solid #dee2e6;       /* Borde sutil */
-    padding: 20px;                   /* Relleno interno para que el texto no toque los bordes */
-    margin-bottom: 15px;             /* Campo de fuerza exterior para empujar a los hermanos */
-    border-radius: 6px;
-}
+/* ==========================================================
+   CONEXIÓN DE MÓDULOS INDEPENDIENTES (Arquitectura BEM)
+   ========================================== */
+@import url('css/tarjeta.css');
+@import url('css/botones.css');
+@import url('css/menu-lateral.css');
